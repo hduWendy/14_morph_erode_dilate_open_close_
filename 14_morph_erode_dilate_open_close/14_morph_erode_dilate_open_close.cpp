@@ -27,10 +27,10 @@ int main()
 	}
 	cv::Mat erode, dilate, open, close;
 	Mat element = getStructuringElement(MORPH_RECT, Size(3, 3), Point(-1, -1));
-	morphologyEx(srcMat, erode,0, element, Point(-1, -1),BORDER_CONSTANT);
-	morphologyEx(srcMat, dilate, 1, element, Point(-1, -1), BORDER_CONSTANT);
-	morphologyEx(srcMat, open, 2, element, Point(-1, -1), BORDER_CONSTANT);
-	morphologyEx(srcMat, close, 3, element, Point(-1, -1), BORDER_CONSTANT);
+	morphologyEx(srcMat, erode,0, element, Point(-1, -1));
+	morphologyEx(srcMat, dilate, 1, element, Point(-1, -1) );
+	morphologyEx(srcMat, open, 2, element, Point(-1, -1));
+	morphologyEx(srcMat, close, 3, element, Point(-1, -1));
 	imshow("erode", erode);
 	imshow("dilate", dilate);
 	imshow("open", open);
